@@ -1,26 +1,28 @@
 console.log("👋 Hello World!");
 
-console.log("Tâche 1");
-console.log("Tâche 2");
-console.log("Tâche 3");
+// console.log("Tâche 1");
+// console.log("Tâche 2");
+// console.log("Tâche 3");
 
 // setTimeout(() => {
 //     console.log("Opération terminée !");
 // }, 2000);
 
-console.log("Tâche 4");
+// console.log("Tâche 4");
 
-// function operationAsynchrone_1(callback) {
-//     console.log("Début de l'opération...");
-//     setTimeout(() => {
-//         console.log("Opération_1 terminée !");
-//         fin();
-//     }, 2000); // Simule une opération qui prend 2 secondes
-// }
+function operationAsynchrone_1(callback) {
+    console.log("Début de l'opération...");
+    setTimeout(() => {
+        console.log("Opération_1 terminée !");
+        callback();
+    }, 2000); // Simule une opération qui prend 2 secondes
+}
 
-// function fin() {
-//     console.log("Je suis appelé après l'opération asynchrone.");
-// }
+function fin() {
+    console.log("Je suis appelé après l'opération asynchrone.");
+}
+
+operationAsynchrone_1(fin);
 
 // callback
 
